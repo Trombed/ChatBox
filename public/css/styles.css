@@ -1,6 +1,6 @@
 /* changes font stuff  */
 @font-face {
-font-family: 'Terminator Real NFI';
+font-family: 'Source Code Pro', monospace;;
 font-style: normal;
 font-weight: normal;
 src: local('Terminator Real NFI'), url('terminator real nfi.woff') format('woff');
@@ -8,7 +8,7 @@ src: local('Terminator Real NFI'), url('terminator real nfi.woff') format('woff'
 
 
 @font-face {
-font-family: 'Terminator Real NFI';
+font-family: 'Source Code Pro', monospace;;
 font-style: normal;
 font-weight: normal;
 src: local('Terminator Real NFI'), url('terminator real nfi.woff') format('woff');
@@ -20,7 +20,8 @@ src: local('Terminator Real NFI'), url('terminator real nfi.woff') format('woff'
 
 * {
   box-sizing: border-box;
-  font-family: 'Terminator Real NFI';
+  font-family: 'Source Code Pro', monospace;
+
 }
 
 body,
@@ -29,7 +30,8 @@ html {
   padding: 0;
   font-size: 15px;
  
-  font-family: 'Terminator Real NFI';
+  font-family: 'Source Code Pro', monospace;
+
   background-color: black;
 }
 
@@ -163,12 +165,12 @@ a.button:hover {
   /*margin: 2rem auto;*/
   display: flex;
   flex-direction: column;
-  font-family: 'Terminator Real NFI';
+  font-family: 'Source Code Pro', monospace;;
   
 }
 
 .disconnected .offline {
-    font-family: 'Terminator Real NFI'
+    font-family: 'Source Code Pro', monospace;
 }
 #message_window .disconnected {
   background: #FFFFCC;
@@ -223,7 +225,8 @@ a.button:hover {
   outline: none;
   border: none;
   background-color: black;
-  font-family: "Pixelated MS Sans Serif", Arial;
+  font-family: 'Source Code Pro', monospace;
+
   -webkit-font-smoothing: none;
   color: white;
 }
@@ -538,6 +541,8 @@ a {
 .terminal {
   background-color: black;
   overflow-y: visible; 
+  font-family: 'Source Code Pro', monospace;
+
   /* opacity: .85; */
 }
 
@@ -583,7 +588,7 @@ button {
   display: none;
   background-color: white;
   font-family: "Pixelated MS Sans Serif", Arial;
-  -webkit-font-smoothing: none;
+ 
 
   position: fixed;
   top: 50%;
@@ -606,4 +611,8 @@ button {
   height: 1rem;
   background: rgb(11,18,156);
   background: linear-gradient(90deg,#000080,#1084d0);
+}
+
+#readme_body {
+  background-color: rgb(255, 255, 125);
 }

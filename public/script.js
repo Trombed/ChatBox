@@ -9,3 +9,9 @@ menu.onclick = function() {
         readme.style.display = "none";
       }
 }
+
+document.addEventListener ('keydown', (e) => {
+  if (e.key === "Escape") {
+   readme.style.display = "none"
+  } 
+})
