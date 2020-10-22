@@ -26,7 +26,7 @@ var Botkit = {
     trigger: function (event, details) {
         var event = new CustomEvent(event, {
             detail: details
-        });
+        });   
         this.message_window.dispatchEvent(event);
     },
     request: function (url, body) {
@@ -66,27 +66,30 @@ var Botkit = {
         var that = this;
         if (e) e.preventDefault();
         if (!text) {
+            
             return;
         }
         var message = {
             type: 'outgoing',
             text: text
         };
-
+        
         this.clearReplies();
+       
         that.renderMessage(message);
-
+     
+        
         that.deliverMessage({
             type: 'message',
             text: text,
             user: this.guid,
             channel: this.options.use_sockets ? 'websocket' : 'webhook'
         });
-
+        
         this.input.value = '';
-
+        
         this.trigger('sent', message);
-
+        
         return false;
     },
     deliverMessage: function (message) {
@@ -230,9 +233,13 @@ var Botkit = {
     },
     clearReplies: function () {
         this.replies.innerHTML = '';
+     
     },
     quickReply: function (payload) {
+    
         this.send(payload);
+        
+       
     },
     focus: function () {
         this.input.focus();
@@ -385,18 +392,21 @@ var Botkit = {
 
         that.on('sent', function () {
             // do something after sending
+            // console.log(wrapper)
         });
 
         that.on('message', function (message) {
 
-            console.log('RECEIVED MESSAGE', message);
+            // console.log('RECEIVED MESSAGE', message);
             that.renderMessage(message);
+            
 
         });
 
         that.on('message', function (message) {
             if (message.goto_link) {
                 window.location = message.goto_link;
+           
             }
         });
 
@@ -404,7 +414,7 @@ var Botkit = {
         that.on('message', function (message) {
             that.clearReplies();
             if (message.quick_replies) {
-
+          
                 var list = document.createElement('ul');
 
                 var elements = [];
@@ -454,12 +464,15 @@ var Botkit = {
                         text: history[m].text,
                         type: history[m].type == 'message_received' ? 'outgoing' : 'incoming', // set appropriate CSS class
                     });
+                   
                 }
+                
             }
         });
 
 
         if (window.self !== window.top) {
+            
             // this is embedded in an iframe.
             // send a message to the master frame to tell it that the chat client is ready
             // do NOT automatically connect... rather wait for the connect command.

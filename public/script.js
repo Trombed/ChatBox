@@ -39,8 +39,11 @@ exitButton.onclick = function() {
 
 
 $('#get_started_button').click( () => {
-  console.log("HELP")
+  
   $('html, body').animate({
-    scrollTop: $('#wrapper').offset().top
-}, 100, "linear");
+    scrollTop: $('#wrapper')
+
+}, 1500, function () {
+  $('#landing').hide()
+});
 })
