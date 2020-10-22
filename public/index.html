@@ -3,6 +3,7 @@
 
         <title>Terminal</title>
         <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/cowfish813/MintBeanHackathon/main/assets/imgbin-skynet-logo-cyberdyne-systems-robot-cyberdyne-inc-robot-RZEp0BubCMLQNN6EK5eWwwz6M.png" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
@@ -10,26 +11,41 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
         <script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
         <link rel="stylesheet" href="/css/styles.css" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
     <body >
       <div id="landing">
         <div class="grid-left">
             <div id="landing_title">
-                Hack-a-Chat-Bot
+                EricBot
               </div>
               <div id="landing_desc">
                 Chat Bot is an interactive Bot that can answer your basic questions about its creator Eric Ho. A software engineer candidate. 
               </div>
               <div id="get_started_button">
-                Lets Chat
+                Let's Chat
+              </div>
+              <div>
+                <a href="https://github.com/Trombed">
+                  <i class="fab fa-github fa-3x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/eric-ho-9377b21a4/">
+                  <i class="fab fa-linkedin fa-3x"></i>
+                </a>
+               
+
+                <a href="mailto:eric.h924@gmail.com">
+                  <i class="fas fa-envelope fa-3x"></i>
+                </a>
               </div>
         </div>
         <div class="grid-right">
-          <img src='images/computer.png' />
+          <img src='images/computer.png' class="landing_image" />
         </div>
       </div>
-
+    <div class="chatbox_window">
       <div class="wrapper" id="wrapper">
      
         <div id="message_window">
@@ -120,9 +136,11 @@
             </footer>
         </div>
         </div>
-        
+      </div>  
         <script src="/client.js"></script>
         <script src="/script.js"></script>
+        <script src="https://kit.fontawesome.com/5ae5ed3218.js" crossorigin="anonymous"></script>
+
 
     </body>
 </html>

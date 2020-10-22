@@ -29,8 +29,18 @@ exitButton.onclick = function() {
   readme.style.display = "none"
 
 }
-getStarted.onclick = function() {
-  landing.classList.add('slide-out')
-  landing.style.display = "none"
+// getStarted.onclick = function() {
+//   // landing.classList.add("slide-out")
+//   // landing.style.display = "none"
+//   // wrapper.style.display = "block"
 
-}
+
+// }
+
+
+$('#get_started_button').click( () => {
+  console.log("HELP")
+  $('html, body').animate({
+    scrollTop: $('#wrapper').offset().top
+}, 100, "linear");
+})
