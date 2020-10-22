@@ -487,4 +487,5 @@ var Botkit = {
     // your page initialization code here
     // the DOM will be available here
     Botkit.boot();
+    window.scrollTo(0,0)
 })();

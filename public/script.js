@@ -2,8 +2,9 @@ let menu = document.getElementById('help')
 let readme = document.getElementById('readme')
 let close = document.getElementById('close')
 let exitButton = document.getElementById("exit_button")
-
-
+let getStarted = document.getElementById("get_started_button")
+let landing = document.getElementById('landing')
+let wrapper = document.getElementById('wrapper')
 
 menu.onclick = function() {
   if (readme.style.display === "none" || readme.style.display === "") {
@@ -26,5 +27,10 @@ close.onclick = function() {
 
 exitButton.onclick = function() {
   readme.style.display = "none"
-}
 
+}
+getStarted.onclick = function() {
+  landing.classList.add('slide-out')
+  landing.style.display = "none"
+
+}
