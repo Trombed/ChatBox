@@ -557,24 +557,24 @@ button {
 
 
 ::-webkit-scrollbar-track {
-  background-color: rgb(66, 66, 66);
+  background-color: rgb(82, 82, 82);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(53, 53, 53);
   border-left: 1px solid grey;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
 }
 
 #help {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 3px;
+  margin-right: 1px;
   background-color: silver;
   min-height: 14px;
   min-width: 16px;
-
-
   color: black;
   font-family: "Pixelated MS Sans Serif", Arial;
   font-weight: 900;
@@ -590,21 +590,21 @@ button {
 
 
 #readme {
-  display: none;
   background-color: rgb(255, 255, 125);
   font-family: "Pixelated MS Sans Serif", Arial;
- 
-
   position: fixed;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  height: 400px;
+  min-height: 200px;
   width: 400px;
   box-shadow: inset -1px -1px #ffffff, inset 1px 1px #dfdfdf, inset -2px -2px rgb(255, 255, 255), inset 2px 2px #fff;
   border-style: ridge;
+  display: none;
 }
+
+
+
 
 #readme_header {
   padding-left: 10px;
@@ -613,7 +613,7 @@ button {
   justify-content: left;
   align-items: center;
   color: white;
-  height: 1rem;
+  height: 17px;
   background: rgb(11,18,156);
   background: linear-gradient(90deg,#000080,#1084d0);
   display: flex;
@@ -623,6 +623,13 @@ button {
 #readme_body {
   padding: 1rem;
   background-color: rgb(255, 255, 125);
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+}
+
+#readme_body div {
+  padding-bottom: 10px;
 }
 
 #close {
@@ -646,4 +653,34 @@ button {
 #close:active {
   box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
 
+}
+
+#exit_button {
+
+  font-family: "Pixelated MS Sans Serif",Arial;
+  -webkit-font-smoothing: none;
+  font-size: 11px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0;
+  width: 75px;
+  height: 23px;
+  padding: 6 12px;
+  background: silver;
+  display: inline-block;
+  justify-content: flex-end;
+  text-align: center;
+  align-items: flex-start;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  cursor: pointer;
+}
+
+#exit_button:active {
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+    padding: 4px 11px 0 13px;
+}
+
+#exit_row {
+  display: flex;
+  justify-content: flex-end;
 }
